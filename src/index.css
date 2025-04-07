@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+
+@theme{
+    --color-text: #E2E8F0;
+    --color-accent: #94A3B8;
+    --color-cta: #4ADE80;
+    --color-bg: #0F172A;
+}
+
+@utility t-header{
+    font-size: 34px
+}
+
+
+
+.dark{
+    --color-text: #E2E8F0;
+    --color-accent: #94A3B8;
+    --color-cta: #4ADE80;
+    --color-bg: #0F172A;
+}
+
+body{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
