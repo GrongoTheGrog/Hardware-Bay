@@ -2,17 +2,16 @@
 
 
 @theme{
-    --color-text: #E2E8F0;
-    --color-accent: #94A3B8;
-    --color-cta: #4ADE80;
-    --color-bg: #0F172A;
+    --color-text:  #0F172A; /* Dark navy text (your old background) */
+    --color-accent: #64748B; /* Soft bluish-gray (darker version of accent) */
+    --color-cta:    #22C55E; /* Slightly darker green for contrast on light bg */
+    --color-bg:     #F8FAFC; /* Very light grayish blue background */
+
 }
 
 @utility t-header{
     font-size: 34px
 }
-
-
 
 .dark{
     --color-text: #E2E8F0;
@@ -21,7 +20,28 @@
     --color-bg: #0F172A;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer base{
+    button{
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        background-color: var(--color-accent);
+        border-radius: 5px;
+    }
+}
+
+
+.selected{
+    @apply rounded-lg
+}
+
+
 body{
     background-color: var(--color-bg);
     color: var(--color-text);
+    padding-bottom: 40px;
 }
