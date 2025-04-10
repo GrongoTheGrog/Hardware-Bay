@@ -75,7 +75,7 @@ const Products = () => {
     return (
         <section className='py-[40px] px-[30px] flex flex-col items-center'> 
 
-                <div className={'transition-all transition-400 ease fixed w-full flex h-[80px] bg-cta bottom-0 shadow-2xl text-bg text-[24px] font-bold items-center justify-between px-[20px] ' + (cart.products.length ? 'bottom-0' : 'bottom-[-80px]')}>
+                <div className={'transition-[bottom] transition-400 ease fixed w-full flex h-[80px] bg-cta bottom-0 shadow-2xl text-bg text-[24px] font-bold items-center justify-between px-[20px] ' + (cart.products.length ? 'bottom-0' : 'bottom-[-80px]')}>
                     <i className="fa-solid fa-cart-shopping"></i>
 
                     <span>

@@ -1,23 +1,29 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import heroPage from '../assets/modern-desktop-compute-concept-illustration.png';
 
 const Home = () => {
     const navigator = useNavigate();
     return (
-        <section className='flex flex-col gap-[30px] mt-[90px] w-[100%] px-[50px]'>
-            <h1 className='text-[55px] text-cta font-bold'>
-                {`<Hardware Bay/>`}
-            </h1>
+        <section className='flex flex-col gap-[30px] mt-[90px] w-[100%] px-[50px] md:px-[140px] md:gap-[50px] md:items-center'>
+            <div className="w-full flex justify-between">
+                <div className="flex flex-col gap-[30px]">
+                    <h1 className='text-[55px] text-cta font-bold md:text-[70px] md:mb-[40px]'>
+                        {`<Hardware Bay/>`}
+                    </h1>
+                    <p className='text-[20px] w-[260px] leading-snug'>
+                        Welcome to Hardware Bay — Your Gateway to the Best in Tech.
+                    </p>
+                    <button className='text-[20px] font-bold w-fit px-[40px] text-bg bg-cta mt-[10px] md:ml-[10px]' onClick={() => navigator('/products')}>
+                        Buy now
+                    </button>
+                </div>
 
-            <p className='text-[20px] w-[260px] leading-snug'>
-                Welcome to Hardware Bay — Your Gateway to the Best in Tech.  
-            </p>
-
-            <button className='text-[20px] font-bold w-fit px-[40px] text-bg bg-cta mt-[10px]' onClick={() => navigator('/products')}>
-                Buy now
-            </button>
+                <img src={heroPage} className="w-[600px] hidden md:block">
+                </img>
+            </div>
 
 
-            <div className='flex flex-col gap-[30px] items-center mt-[80px]'>
+            <div className='flex flex-col gap-[30px] items-center mt-[80px] md:flex-row md:items-start md:w-[800px] md:justify-between'>
                 <div className='flex flex-col items-center gap-[30px] text-[18px] w-[280px]'>
                     <span className='flex gap-[20px] text-[30px] items-center text-cta'>
                         <i className="fa-solid fa-user text-[32px]"></i>
@@ -34,7 +40,7 @@ const Home = () => {
                 </div>
 
 
-                <div className='flex flex-col items-center gap-[30px] text-[18px] w-[280px] mt-[50px]'>
+                <div className='flex flex-col items-center gap-[30px] text-[18px] w-[280px] mt-[50px] md:mt-0'>
                     <span className='flex gap-[20px] text-[30px] items-center text-cta'>
                         <i className="fa-solid fa-list-check text-[32px]"></i>
                             Our goal

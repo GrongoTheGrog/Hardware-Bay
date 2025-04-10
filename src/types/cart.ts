@@ -20,4 +20,8 @@ export type RemoveFromCart = {
   product: Product,
 }
 
-export type Action = AddToCart | RemoveFromCart;
+export type ClearCart = {
+  type: 'clear-cart'
+}
+
+export type Action = AddToCart | RemoveFromCart | ClearCart;

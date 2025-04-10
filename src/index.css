@@ -13,6 +13,10 @@
     font-size: 34px
 }
 
+@utility pointer{
+    cursor: pointer;
+}
+
 .dark{
     --color-text: #E2E8F0;
     --color-accent: #94A3B8;
@@ -31,8 +35,11 @@
         font-size: 18px;
         background-color: var(--color-accent);
         border-radius: 5px;
+        cursor: pointer;
     }
 }
+
+
 
 
 .selected{
