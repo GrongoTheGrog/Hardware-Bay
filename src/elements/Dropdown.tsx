@@ -37,7 +37,7 @@ const Dropdown = <T,>({className, label, values, set}: Prop<T>) => {
         <div className={"text-[16px] flex flex-col gap-[3px] w-[160px] relative " + className} ref={container}>
             <span className="font-bold">{label}</span>
 
-            <div className="px-[10px] mt-[3px] py-[1px] border border-accent rounded-[5px] flex gap-[10px] items-center" onClick={() => setPicking(prev => !prev)}>
+            <div className="px-[10px] mt-[3px] py-[1px] border border-accent rounded-[5px] flex gap-[10px] items-center pointer" onClick={() => setPicking(prev => !prev)}>
                 <i className="fa-solid fa-caret-down text-[14px]"></i>
                 {current.label}
             </div>
@@ -47,7 +47,7 @@ const Dropdown = <T,>({className, label, values, set}: Prop<T>) => {
                     let cl: string = '';
                     if (value.label === current.label) cl = 'text-cta'
                     return (
-                        <div key={index} className={"px-[10px] py-[1px] border border-accent rounded-[5px] flex gap-[10px] items-center bg-bg z-5 pl-[15px] " + cl}  onClick={() => clickOption(value)}>
+                        <div key={index} className={"px-[10px] py-[1px] border border-accent rounded-[5px] flex gap-[10px] items-center bg-bg z-5 pl-[15px] pointer " + cl}  onClick={() => clickOption(value)}>
                             {value.label}
                         </div>
                     )

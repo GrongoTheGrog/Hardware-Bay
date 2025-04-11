@@ -75,7 +75,7 @@ const Products = () => {
     return (
         <section className='py-[40px] px-[30px] flex flex-col items-center'> 
 
-                <div className={'transition-[bottom] transition-400 ease fixed w-full flex h-[80px] bg-cta bottom-0 shadow-2xl text-bg text-[24px] font-bold items-center justify-between px-[20px] ' + (cart.products.length ? 'bottom-0' : 'bottom-[-80px]')}>
+                <div className={'transition-[bottom] transition-400 ease fixed w-full md:w-[25%] md:text-[20px] md:h-[60px] md:min-w-[300px] flex h-[80px] bg-cta bottom-0 shadow-2xl text-bg text-[24px] font-bold items-center justify-between px-[20px] md:rounded-[5px] ' + (cart.products.length ? 'bottom-0 md:bottom-[60px]' : 'bottom-[-80px] md:bottom-[-60px')}>
                     <i className="fa-solid fa-cart-shopping"></i>
 
                     <span>
@@ -86,14 +86,14 @@ const Products = () => {
                         {cart.products.length} item(s)
                     </span>
 
-                    <i className="fa-solid fa-arrow-up-right-from-square" onClick={() => navigator('/cart')}></i>
+                    <i className="fa-solid fa-arrow-up-right-from-square pointer" onClick={() => navigator('/cart')}></i>
                 </div>
 
             <div className='flex rounded-full border-cta border w-fit '>
                 <input 
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className='px-[30px] py-[5px] w-[240px] outline-none'
+                    className='px-[30px] py-[5px] w-[240px] outline-none md:w-[380px]'
                     placeholder='Search'
                     >
                 </input>
@@ -106,13 +106,13 @@ const Products = () => {
                 </button>
             </div>
 
-            <div className='flex justify-between mt-[20px] w-full'>
+            <div className='flex justify-between mt-[20px] w-[400px]'>
                 <Dropdown label='Price' values={priceValues} set={setPriceFilter}/>
                 <Dropdown label='Category' values={categoryValues} set={setCategoryFilter}/>
             </div>
 
 
-            <div className='flex flex-col gap-[65px] mt-[60px]'>
+            <div className='flex flex-col gap-[65px] mt-[60px] md:grid md:grid-cols-3 md:w-[80%]'>
                 {filteredList.map((product) => {
                     const stars = [];
                     for (let i = 1; i <= 5; i++){

@@ -11,7 +11,7 @@ const Header = () => {
   const label = cart.products.length > 9 ? '+9' : cart.products.length;
 
   return (
-    <header className="h-[80px] flex items-center justify-between p-3 px-[30px] md:h-[60px] md:px-[60px] md:py-[40px] md:border-bottom md:
+    <header className="h-[80px] flex items-center justify-between p-3 px-[30px] md:h-[40px] md:px-[60px] md:py-[35px] md:border-b md:border-cta
     ">
       <h3 className="t-header font-bold text-cta cursor-pointer" onClick={() => navigator('/')}>
         {"<HB/>"}

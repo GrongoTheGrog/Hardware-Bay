@@ -13,7 +13,7 @@ const Cart = () => {
     }
 
     return (
-        <section className="flex flex-col px-[35px] py-[40px] text-cta gap-[20px]">
+        <section className="flex flex-col md:w-[600px] px-[35px] py-[40px] text-cta gap-[20px] m-auto">
             <h2 className="flex gap-[20px] items-center px-[30px]">
                 <i className="fa-solid fa-cart-shopping text-[38px]"></i>
                 <span className="text-[38px] font-semibold">
