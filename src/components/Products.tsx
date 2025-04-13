@@ -99,7 +99,7 @@ const Products = () => {
                 </input>
                 <button className='py-[0] px-[30px] bg-transparent flex items-center w-[60px]'>
                     {!search.length ? 
-                    <i className="fa-solid fa-magnifying-glass text-[14px]"></i> :
+                    <i className="fa-solid fa-magnifying-glass text-[14px]" onClick={() => setSearch('')}></i> :
                     <i className="fa-solid fa-x text-[14px]" onClick={() => setSearch('')}></i>
                     }
                     
