@@ -1,6 +1,7 @@
 # Tailwind + Vite + Typescript
 
 This project is an fictitious ecommerce app built for a random persona, with the main goal of improving my skills in Typescript and Tailwind.
+Live at: https://hardware-bay.pages.dev
 
 ## Tech Stack
 
@@ -28,7 +29,7 @@ You can run by typing
 npm run dev
 ````
  in the terminal.
-
+ 
 ## UI
 
 - **Home**:
